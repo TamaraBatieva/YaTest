@@ -1,0 +1,172 @@
+/* Basics */
+
+body {
+    margin: 0 !important;
+    padding: 0;
+    background-color: #F7F7F7;
+}
+
+table {
+    border-spacing: 0;
+    font-family: sans-serif;
+    color: #333333;
+}
+
+td {
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+div[style*="margin: 16px 0"] {
+    margin: 0 !important;
+}
+
+.wrapper {
+    width: 100%;
+    table-layout: fixed;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+.webkit {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.outer {
+    Margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.logo {
+    vertical-align: middle;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+
+/*border-bottom: solid 1px #979797;*/
+
+.inner {
+    /*    padding: 20px;*/
+    /*    background-color: #ffffff;*/
+}
+
+p {
+    Margin: 0;
+}
+
+a {
+    color: #ee6a56;
+    text-decoration: underline;
+}
+
+.inner p.header {
+    font-size: 21px;
+    Margin-bottom: 18px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* One column layout */
+
+.one-column .contents {
+    text-align: left;
+    background-color: #ffffff;
+}
+
+.one-column p {
+    font-size: 15px;
+    Margin-bottom: 10px;
+}
+
+.one-column .contents.separator {
+    text-align: center;
+    background-color: #F7F7F7;
+}
+
+
+/* Left sidebar layout */
+
+.left-sidebar {
+    text-align: center;
+    font-size: 0;
+    background-color: #ffffff;
+}
+
+.left-sidebar .column {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.left-sidebar .left {
+    max-width: 180px;
+}
+
+.left-sidebar .right {
+    max-width: 360px;
+}
+
+.left-sidebar .img {
+    width: 100%;
+    max-width: 106px;
+    height: auto;
+}
+
+.left-sidebar .contents {
+    font-size: 14px;
+    text-align: left;
+}
+
+.left-sidebar a {
+    color: #85ab70;
+}
+
+
+/*Footer layout*/
+
+
+/* Left sidebar layout */
+
+.footer {
+    text-align: center;
+    font-size: 0;
+    background-color: #F7F7F7;
+}
+
+.footer .column {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.footer .left {
+    max-width: 150px;
+    font-size: 13px;
+}
+
+.footer .right {
+    max-width: 450px;
+}
+
+.footer .img {
+    width: 100%;
+    /*    max-width: 80px;*/
+    height: auto;
+}
+
+.footer .contents {
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer a {
+    color: #85ab70;
+}
