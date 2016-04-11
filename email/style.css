@@ -50,9 +50,6 @@ div[style*="margin: 16px 0"] {
     padding-bottom: 30px;
 }
 
-
-/*border-bottom: solid 1px #979797;*/
-
 .inner {
     /*    padding: 20px;*/
     /*    background-color: #ffffff;*/
@@ -86,9 +83,13 @@ a {
 
 .third-block .right .inner {
     border-bottom: solid 1px #979797;
-    vertical-align: top;
+    vertical-align: middle;
     padding: 0 25px 25px 0;
     line-height: 20px;
+}
+
+.third-block .right .inner.last {
+    border-bottom: 0;
 }
 
 .button {
@@ -131,7 +132,7 @@ a {
 .left-sidebar .column {
     width: 100%;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 .left-sidebar .left {
@@ -144,6 +145,10 @@ a {
     padding: 20px;
 }
 
+.left-sidebar .right inner {
+    vertical-align: middle;
+}
+
 .left-sidebar .img {
     width: 100%;
     max-width: 106px;
@@ -151,7 +156,7 @@ a {
 }
 
 .left-sidebar .contents {
-    font-size: 14px;
+    font-size: 17px;
     text-align: left;
 }
 
