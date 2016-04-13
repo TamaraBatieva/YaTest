@@ -98,6 +98,10 @@
         .button {
             padding-top: 10px;
         }
+        .mobile-text {
+            display: none;
+            padding: 20px 0;
+        }
         /* One column layout */
         
         .one-column-block .contents {
@@ -264,7 +268,14 @@
            .footer.first-part .left {
             display: none;
            }
-           .footer.first-part .right {
+           
+           .mobile-text {
+            display: inline-block;
+           }
+           .footer.second-part .left {
+            border-bottom: solid 1px #e5e5e5;
+           }
+           .footer.first-part {
             border: none;
            }
         }
@@ -295,7 +306,14 @@
            .footer.first-part .left {
             display: none;
            }
-           .footer.first-part .right {
+           
+           .mobile-text {
+            display: inline-block;
+           }
+           .footer.second-part .left {
+            border-bottom: solid 1px #e5e5e5;
+           }
+           .footer.first-part {
             border: none;
            }
         }
