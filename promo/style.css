@@ -17,26 +17,89 @@
 		float:	left;
 	}
 
-.sprite {
-    background-image: url(spritesheet.png);
+.star-sprite {
+    background-image: url('star.png');
     background-repeat: no-repeat;
-    display: block;
+    display: inline-block;
 }
 
-.sprite-star1 {
+.csslider1 .num2 .app-star1, .csslider1 .num2 .app-star2, .csslider1 .num2 .app-star3, .csslider1 .num2 .app-star4 {
     width: 11px;
     height: 11px;
     background-position: 0 0;
 }
 
-.sprite-star2 {
+.csslider1 .num2 .app-star5 {
     width: 11px;
     height: 11px;
     background-position: 0 -11px;
 }
 
 
+.overlay {
+	z-index: 5;
+	display: block;
+	width: 320px;
+	height: 178px;
+	padding: 16px;
+	box-sizing: border-box;
+	background: #000000;
+	opacity: .5;
+	font-family: arial;
+	color: #ffffff;
+	font-size: 9px;
+	position: relative;
+	top: -178px;
+	left: 0;
+}
+.overlay-text {
+	z-index: 6;
+	display: block;
+	width: 320px;
+	height: 178px;
+	padding: 16px;
+	box-sizing: border-box;
+	font-family: arial;
+	color: #ffffff;
+	position: relative;
+	top: -356px;
+	left: 0;
+}
+.overlay-text h1 {
+	font-size: 32px;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	opacity: 1;
+	margin: 0;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.30);
+}
+.overlay-text p {
+	font-size: 13px;
+	font-family: Arial, sans-serif;
+	opacity: 1;
+	margin: 0;
+	line-height: 18px;
+	text-shadow: 0px 1px 2px rgba(0,0,0,0.30);
+}
 
+.overlay-text button {
+	margin-top: 11px;
+	background-color: #DB3727;
+	font-size: 15px;
+	color: #ffffff;
+	font-family: Arial, sans-serif;
+	font-weight: bold;
+	border: solid 1px #DB3727;
+	padding: 10px 16px;
+	border-radius: 4px;
+}
+.csslider1 .num2 #carousel3-icon {
+	width: 72px;
+	height: 72px;
+	position: absolute;
+	top: 16px;
+	right: 16px;
+}
 	.rslides {
   position: relative;
   list-style: none;
@@ -458,8 +521,6 @@
 	  -webkit-animation: pauseChange 10800ms infinite 5300ms;
 	  animation: pauseChange 10800ms infinite 5300ms;
 	}
-
-
 	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
 	.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
 	  -webkit-animation: none;
@@ -467,7 +528,7 @@
 	}
 
 	/* ------------- Play Pause CSS ------------- */
-	.csslider1{position:relative}
+	/*.csslider1{position:relative}
 	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play{
 	    display: block;
 	    background: rgba(0,0,0,0.5);
@@ -476,8 +537,6 @@
 	    padding: 3px;
 	    font-family: arial;
 	    font-size: 9px;
-	    width: 320px;
-	    height: 178px;
 	}
 	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play:hover{ background: rgba(0,0,0,1);}
 	.csslider1 > .cs_play_pause {
@@ -486,4 +545,4 @@
 	    z-index: 5;
 	    margin-right: 0;
 	    z-index: 111;
-	}
+	}*/
