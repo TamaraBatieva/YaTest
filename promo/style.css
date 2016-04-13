@@ -16,6 +16,7 @@
 		list-style: none;
 		float:	left;
 	}
+	
 
 .star-sprite {
     background-image: url('star.png');
@@ -107,7 +108,7 @@
   .csslider1 {
 		display: inline-block;
 		position: relative;
-		max-width: 830px;
+		max-width: 1280px;
 		
 		width: 100%;
 		margin-top: 10px;
@@ -169,10 +170,7 @@
 	}
 
 	.csslider1 > ul > li.img,
-	.csslider1 > .cs_arrowprev,
-	.csslider1 > .cs_arrownext,
-	.csslider1 > .cs_bullets,
-	.csslider1 > .cs_play_pause {
+	.csslider1 > .cs_bullets {
 		-webkit-touch-callout: none;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
@@ -224,7 +222,9 @@
 	.csslider1 > ul > li.num2 {
 		left: 200%;
 	}
-
+	.csslider1 > ul > li.num3 {
+		left: 300%;
+	}
 	.csslider1 > #cs_slide1_0:checked ~ ul > li,
 	.csslider1 > #cs_pause1_0:checked ~ ul > li {
 		-webkit-transform: translateX(0%);
@@ -244,6 +244,13 @@
 		-webkit-transform: translateX(-200%);
 		-moz-transform: translateX(-200%);
 		transform: translateX(-200%);
+		
+	}
+	.csslider1 > #cs_slide1_3:checked ~ ul > li,
+	.csslider1 > #cs_pause1_3:checked ~ ul > li {
+		-webkit-transform: translateX(-300%);
+		-moz-transform: translateX(-300%);
+		transform: translateX(-300%);
 		
 	}
 
@@ -267,25 +274,52 @@
 	}
 
 	
-	@-webkit-keyframes slide {
+	/*@-webkit-keyframes slide {
 		0%, 25.203252032520325%	{ -webkit-transform: translateX(0%); }
 		33.333333333333336%, 58.53658536585366%	{ -webkit-transform: translateX(-100%); }
 		66.66666666666667%, 91.869918699187%	{ -webkit-transform: translateX(-200%); }
+		99.869918699187%, 124%	{ -webkit-transform: translateX(-300%); }
+
 		
 	}
 	@-moz-keyframes slide {
 		0%, 25.203252032520325%	{ -moz-transform: translateX(0%); }
 		33.333333333333336%, 58.53658536585366%	{ -moz-transform: translateX(-100%); }
 		66.66666666666667%, 91.869918699187%	{ -moz-transform: translateX(-200%); }
+		99.869918699187%, 124%	{ -webkit-transform: translateX(-300%); }
+
 		
 	}
 	@keyframes slide {
 		0%, 25.203252032520325%	{ transform: translateX(0%); }
 		33.333333333333336%, 58.53658536585366%	{ transform: translateX(-100%); }
 		66.66666666666667%, 91.869918699187%	{ transform: translateX(-200%); }
+		99.869918699187%, 124%	{ -webkit-transform: translateX(-300%); }
+		
+	}*/
+@-webkit-keyframes slide {
+		0%, 20%	{ -webkit-transform: translateX(0%); }
+		25%, 45%	{ -webkit-transform: translateX(-100%); }
+		50%, 70%	{ -webkit-transform: translateX(-200%); }
+		75%, 95%	{ -webkit-transform: translateX(-300%); }
+
 		
 	}
+	@-moz-keyframes slide {
+		0%, 20%		{ -moz-transform: translateX(0%); }
+		25%, 45% 	{ -moz-transform: translateX(-100%); }
+		50%, 70%	{ -moz-transform: translateX(-200%); }
+		75%, 95%	{ -webkit-transform: translateX(-300%); }
 
+		
+	}
+	@keyframes slide {
+		0%, 20%		{ transform: translateX(0%); }
+		25%, 45% { transform: translateX(-100%); }
+		50%, 70%	{ transform: translateX(-200%); }
+		75%, 95%	{ -webkit-transform: translateX(-300%); }
+		
+	}
 
 	.csslider1  > #cs_play1:checked ~ ul > li {
 		-webkit-animation: slide 12300ms infinite;
@@ -351,7 +385,9 @@
 	.csslider1 > #cs_slide1_1:checked ~ .cs_bullets > label.num1,
 	.csslider1 > #cs_pause1_1:checked ~ .cs_bullets > label.num1,
 	.csslider1 > #cs_slide1_2:checked ~ .cs_bullets > label.num2,
-	.csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2 {
+	.csslider1 > #cs_pause1_2:checked ~ .cs_bullets > label.num2,
+	.csslider1 > #cs_slide1_3:checked ~ .cs_bullets > label.num3,
+	.csslider1 > #cs_pause1_3:checked ~ .cs_bullets > label.num3 {
 		background: #DB3727;
 		padding: 3px;
 		-webkit-box-shadow: none;
@@ -416,7 +452,12 @@
 		animation: bullet 12300ms infinite 7200ms;
 		
 	}
-
+	.csslider1 > #cs_play1:checked ~ .cs_bullets > label.num3 {
+		-webkit-animation: bullet 12300ms infinite 11300ms;
+		-moz-animation: bullet 12300ms infinite 11300ms;
+		animation: bullet 12300ms infinite 11300ms;
+		
+	}
 	.csslider1 > #cs_play1:checked ~ .cs_bullets > label > .cs_point,
 	.csslider1 > .pause:checked ~ .cs_bullets > label > .cs_point {
 		-webkit-transition: none;
@@ -433,86 +474,3 @@
 		-o-animation: none;
 		animation: none;
 	}
-
-	
-	/* ------------- Play ------------- */
-	.csslider1 > .cs_play_pause{display:block;}
-	
-	.csslider1 > .cs_play_pause {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  /*bottom: 0;
-	  right: 0;*/
-	  z-index: 5;
-	}
-	.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause,
-	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play,
-	.csslider1 > .pause:checked ~ .cs_play_pause > .cs_play {
-	  display: block;
-	  z-index: 5;
-	}
-	.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_play,
-	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
-	.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
-	  display: none;
-	  z-index: -1;
-	}
-
-
-
-	@-webkit-keyframes pauseChange {
-	  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
-	  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
-	}
-	@keyframes pauseChange {
-	  0%, 33.32333333333334% { opacity: 1; z-index: 5; }
-	  33.333333333333336%, 100%  { opacity: 0; z-index: -1; }
-	}
-
-
-	.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num0 {
-	  opacity: 0;
-	  z-index: -1;
-	  -webkit-animation: pauseChange 10800ms infinite -1900ms;
-	  animation: pauseChange 10800ms infinite -1900ms;
-	}
-	.csslider1 > #cs_play1:checked ~ .cs_play_pause{display:none;}
-	
-	.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num1 {
-	  opacity: 0;
-	  z-index: -1;
-	  -webkit-animation: pauseChange 10800ms infinite 1700ms;
-	  animation: pauseChange 10800ms infinite 1700ms;
-	}
-	.csslider1 > #cs_play1:checked ~ .cs_play_pause > .cs_pause.num2 {
-	  opacity: 0;
-	  z-index: -1;
-	  -webkit-animation: pauseChange 10800ms infinite 5300ms;
-	  animation: pauseChange 10800ms infinite 5300ms;
-	}
-	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_pause,
-	.csslider1 > .pause:checked ~ .cs_play_pause > .cs_pause {
-	  -webkit-animation: none;
-	  animation: none;
-	}
-
-	/* ------------- Play Pause CSS ------------- */
-	/*.csslider1{position:relative}
-	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play{
-	    display: block;
-	    background: rgba(0,0,0,0.5);
-	    z-index: 5;
-	    color: #fff;
-	    padding: 3px;
-	    font-family: arial;
-	    font-size: 9px;
-	}
-	.csslider1 > .slide:checked ~ .cs_play_pause > .cs_play:hover{ background: rgba(0,0,0,1);}
-	.csslider1 > .cs_play_pause {
-	    position: absolute;
-	    bottom: 0;
-	    z-index: 5;
-	    margin-right: 0;
-	    z-index: 111;
-	}*/
