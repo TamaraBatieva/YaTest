@@ -1,52 +1,48 @@
-#carousel {
-		width: 320px;
-		overflow:hidden;
-	}
-
-	#carousel ul {
-		width: 960px;
-		padding: 0;
-		margin: 0;
-	}
-
-	#carousel ul li {
-		width: 320px;
-		text-align: center;
-		height: 178px;
-		list-style: none;
-		float:	left;
-	}
-.rslides {
-  position: relative;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
-
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }	
+ .slider {
+ z-index: 9;
+ width: 320px;
+ height: 178px;
+ overflow: hidden;
+ position: relative;
+ }
+ .slider ul,
+ .slider li {
+ padding: 0;
+ margin: 0;
+ list-style-type: none;
+ }
+ .slider ul {
+ width: 1290px; 
+ }
+ .slider ul li {
+ list-style-type: none;
+ float: left;
+ width: 320px;
+ height: 178px;
+ }
+ .slider .nav {
+ position: absolute;
+ z-index: 12;
+ left: 139px;
+ bottom: 12px; 
+ }
+ .slider .nav span {
+ opacity: 1;
+ z-index: 12;
+ background: #fff;
+ margin: 0 6px 0 0;
+ width: 6px;
+ height: 6px;
+ border-radius: 8px;
+ cursor: pointer;
+ overflow: hidden;
+ display: block;
+ float: left;
+ box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+}
+ .slider .nav span.on {
+ background: #DB3727;
+ }
 
 .star-sprite {
     background-image: url('star.png');
@@ -54,24 +50,24 @@
     display: inline-block;
 }
 
-.csslider1 .num2 .app-star1, .csslider1 .num2 .app-star2, .csslider1 .num2 .app-star3, .csslider1 .num2 .app-star4 {
+.slider .app-star1, .slider .app-star2, .slider .app-star3, .slider .app-star4 {
     width: 11px;
     height: 11px;
     background-position: 0 0;
     padding-right: 2px;
 }
 
-.csslider1 .num2 .app-star5 {
+.slider .app-star5 {
     width: 11px;
     height: 11px;
     background-position: 0 -11px;
 }
-.csslider1 .num2 .rating {
+.slider1 .rating {
 	padding-top: 4px;
 }
 
 .overlay {
-	z-index: 5;
+	z-index: 10;
 	display: block;
 	width: 320px;
 	height: 178px;
@@ -83,11 +79,11 @@
 	color: #ffffff;
 	font-size: 9px;
 	position: relative;
-	top: -178px;
+	top: -183px;
 	left: 0;
 }
 .overlay-text {
-	z-index: 6;
+	z-index: 11;
 	display: block;
 	width: 320px;
 	height: 178px;
@@ -127,7 +123,7 @@
 	padding: 10px 16px;
 	border-radius: 4px;
 }
-.csslider1 .num2 #carousel3-icon {
+.slider #carousel3-icon {
 	width: 72px;
 	height: 72px;
 	position: absolute;

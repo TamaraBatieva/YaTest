@@ -1,37 +1,25 @@
-// $(document).ready(function(){
-// 	// Set the interval to be 5 seconds
-// 	var t = setInterval(function(){
-// 		$("#carousel ul").animate({marginLeft:-320},900,function(){
-// 			$(this).find("li:last").after($(this).find("li:first"));
-// 			$(this).css({marginLeft:0});
-// 		})
-// 	},3000);
-// });
-
-/*
-This is the visible area of you carousel.
-Set a width here to define how much items are visible.
-The width can be either fixed in px or flexible in %.
-Position must be relative!
-*/
-$(function() {
-    $(".rslides").responsiveSlides();
+$(document).ready(function() {
+ $(".slider").each(function () { // обрабатываем каждый слайдер
+  var obj = $(this);
+  $(obj).append("<div class='nav'></div>");
+  $(obj).find("li").each(function () {
+   $(obj).find(".nav").append("<span rel='"+$(this).index()+"'></span>"); // добавляем блок навигации
+   $(this).addClass("slider"+$(this).index());
   });
-$(".rslides").responsiveSlides({
-  auto: true,             // Boolean: Animate automatically, true or false
-  speed: 500,            // Integer: Speed of the transition, in milliseconds
-  timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-  pager: true,           // Boolean: Show pager, true or false
-  nav: true,             // Boolean: Show navigation, true or false
-  random: false,          // Boolean: Randomize the order of the slides, true or false
-  pause: true,           // Boolean: Pause on hover, true or false
-  pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-  prevText: "Previous",   // String: Text for the "previous" button
-  nextText: "Next",       // String: Text for the "next" button
-  maxwidth: "",           // Integer: Max-width of the slideshow, in pixels
-  navContainer: "",       // Selector: Where controls should be appended to, default is after the 'ul'
-  manualControls: "",     // Selector: Declare custom pager navigation
-  namespace: "rslides",   // String: Change the default namespace used
-  before: function(){},   // Function: Before callback
-  after: function(){}     // Function: After callback
+  $(obj).find("span").first().addClass("on"); // делаем активным первый элемент меню
+ });
+});
+function sliderJS (obj, sl) { // slider function
+ var ul = $(sl).find("ul"); // находим блок
+ var bl = $(sl).find("li.slider"+obj); // находим любой из элементов блока
+ var step = $(bl).width(); // ширина объекта
+ $(ul).animate({marginLeft: "-"+step*obj}, 500); // 500 это скорость перемотки
+}
+$(document).on("click", ".slider .nav span", function() { // slider click navigate
+ var sl = $(this).closest(".slider"); // находим, в каком блоке был клик
+ $(sl).find("span").removeClass("on"); // убираем активный элемент
+ $(this).addClass("on"); // делаем активным текущий
+ var obj = $(this).attr("rel"); // узнаем его номер
+ sliderJS(obj, sl); // слайдим
+ return false;
 });
