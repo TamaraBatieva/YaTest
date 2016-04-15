@@ -1,52 +1,62 @@
- .slider {
- z-index: 9;
- width: 320px;
- height: 178px;
- overflow: hidden;
- position: relative;
- }
- .slider ul,
- .slider li {
- padding: 0;
- margin: 0;
- list-style-type: none;
- }
- .slider ul {
- width: 1290px; 
- }
- .slider ul li {
- list-style-type: none;
- float: left;
- width: 320px;
- height: 178px;
- }
- .slider .nav {
- position: absolute;
- z-index: 12;
- left: 139px;
- bottom: 12px; 
- }
- .slider .nav span {
- opacity: 1;
- z-index: 12;
- background: #ffffff;
- margin: 0 6px 0 0;
- width: 6px;
- height: 6px;
- border-radius: 8px;
- cursor: pointer;
- overflow: hidden;
- display: block;
- float: left;
- box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.50);
+@font-face {
+    font-family: ArialMT;
+    src: url(ArialMT.ttf);
 }
- .slider .nav span.on {
- background: #DB3727;
- }
+.slider {
+    z-index: 9;
+    width: 320px;
+    height: 178px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider ul,
+.slider li {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.slider ul {
+    width: 1290px;
+}
+
+.slider ul li {
+    list-style-type: none;
+    float: left;
+    width: 320px;
+    height: 178px;
+}
+
+.slider .nav {
+    position: absolute;
+    z-index: 12;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+}
+
+.slider .nav span {
+    opacity: 1;
+    z-index: 12;
+    background: #ffffff;
+    margin: 0 6px 0 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    display: block;
+    float: left;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.50);
+}
+
+.slider .nav span.on {
+    background: #DB3727;
+}
 
 .star-sprite {
-    background-image: url('star.png');
-    background-repeat: no-repeat;
+    background: url('star.png') no-repeat;
     display: inline-block;
 }
 
@@ -62,72 +72,79 @@
     height: 11px;
     background-position: 0 -11px;
 }
+
 .slider1 .rating {
-	padding-top: 4px;
+    padding-top: 4px;
 }
 
 .overlay {
-	z-index: 10;
-	display: block;
-	width: 320px;
-	height: 178px;
-	padding: 16px;
-	box-sizing: border-box;
-	background: #000000;
-	opacity: .5;
-	font-family: arial;
-	color: #ffffff;
-	font-size: 9px;
-	position: relative;
-	top: -183px;
-	left: 0;
+    z-index: 10;
+    display: block;
+    width: 320px;
+    height: 178px;
+    padding: 16px;
+    box-sizing: border-box;
+    background: #000000;
+    opacity: .5;
+    font-family: ArialMT, sans-serif;
+    color: #ffffff;
+    font-size: 9px;
+    position: relative;
+    top: -183px;
+    left: 0;
 }
+
 .overlay-text {
-	z-index: 11;
-	display: block;
-	width: 320px;
-	height: 178px;
-	padding: 16px;
-	box-sizing: border-box;
-	font-family: arial;
-	color: #ffffff;
-	position: relative;
-	top: -360px;
-	left: 0;
+    z-index: 11;
+    display: block;
+    width: 320px;
+    height: 178px;
+    padding: 16px;
+    box-sizing: border-box;
+    font-family: ArialMT, sans-serif;
+    color: #ffffff;
+    position: relative;
+    top: -360px;
+    left: 0;
+}
+.overlay-text.third-slide p {
+    line-height: 16px;
 }
 .overlay-text h1 {
-	font-size: 32px;
-	font-family: Arial, sans-serif;
-	font-weight: bold;
-	opacity: 1;
-	margin: 0;
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.30);
+    font-size: 32px;
+    font-family: ArialMT, sans-serif;
+    font-weight: bold;
+    opacity: 1;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.30);
 }
+
 .overlay-text p {
-	font-size: 12px;
-	font-family: Arial, sans-serif;
-	opacity: 1;
-	margin: 0;
-	line-height: 18px;
-	text-shadow: 0px 1px 2px rgba(0,0,0,0.30);
+    font-size: 12px;
+    font-family: ArialMT, sans-serif;
+    opacity: 1;
+    margin: 0;
+    line-height: 18px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.30);
 }
 
 .overlay-text button {
-	margin-top: 11px;
-	background-color: #DB3727;
-	font-size: 15px;
-	color: #ffffff;
-	font-family: Arial, sans-serif;
-	font-weight: bold;
-	border: 0;
-	padding: 10px 16px;
-	border-radius: 4px;
-	cursor: pointer;
+    margin-top: 11px;
+    background-color: #DB3727;
+    font-size: 15px;
+    color: #ffffff;
+    font-family: ArialMT, sans-serif;
+    font-weight: bold;
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 4px;
+    cursor: pointer;
 }
+
 .slider #carousel3-icon {
-	width: 72px;
-	height: 72px;
-	position: absolute;
-	top: 16px;
-	right: 16px;
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
 }
