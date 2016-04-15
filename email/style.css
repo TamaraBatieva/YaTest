@@ -43,14 +43,13 @@
             Margin: 0 auto;
             width: 100%;
             max-width: 600px;
-            padding-top: 30px;
-            padding-bottom: 30px;
         }
         
         .logo {
             vertical-align: middle;
             text-align: center;
             padding-bottom: 30px;
+            padding-top: 30px;
         }
         
         .inner {
@@ -135,50 +134,50 @@
             font-size: 17px;
             font-weight: bold;
         }
-        /* Left sidebar layout */
+        /* Sidebar layout */
         
-        .left-sidebar {
+        .sidebar {
             text-align: center;
             font-size: 0;
             background-color: #ffffff;
         }
         
-        .left-sidebar .column {
+        .sidebar .column {
             width: 100%;
             display: inline-block;
             vertical-align: top;
         }
         
-        .left-sidebar .left {
+        .sidebar .left {
             max-width: 180px;
             padding: 20px 0 20px 20px;
         }
         
-        .left-sidebar .right {
+        .sidebar .right {
             max-width: 360px;
             padding: 20px;
         }
         
-        .left-sidebar .right inner {
+        .sidebar .right inner {
             vertical-align: middle;
         }
         
-        .left-sidebar .img {
+        .sidebar .img {
             width: 100%;
             max-width: 106px;
             height: auto;
         }
         
-        .left-sidebar .contents {
+        .sidebar .contents {
             font-size: 17px;
             text-align: left;
         }
         
-        .left-sidebar.social-buttons img {
+        .sidebar.social-buttons img {
             padding-right: 6px;
         }
         
-        .left-sidebar.social-buttons img.last {
+        .sidebar.social-buttons img.last {
             padding-right: 0;
         }
         /*Footer layout*/
@@ -187,7 +186,8 @@
             text-align: left;
             font-size: 0;
             background-color: #F7F7F7;
-            padding: 20px 0;
+            padding-top: 20px;
+            padding-bottom: 30px;
         }
         
         .footer .column {
@@ -239,7 +239,7 @@
     */
         }
         @media (min-width: 401px) and (max-width: 600px) {
-          .left-sidebar .left, .left-sidebar .right, .footer .left, .footer .right {
+          .sidebar .left, .sidebar .right, .footer .left, .footer .right {
             max-width: 100%;
             width: 400px;
           } 
@@ -248,7 +248,7 @@
             width: 280px;
             height: 210px;
            }
-           .second-block .left-sidebar{
+           .second-block .sidebar{
             text-align: left;
            }
            .social-buttons .inner, .third-block .inner{
@@ -285,7 +285,7 @@
            }
         }
         @media (max-width: 400px) {
-            .left-sidebar .left, .left-sidebar .right, .footer .left, .footer .right {
+            .sidebar .left, .sidebar .right, .footer .left, .footer .right {
             max-width: 100%;
             width: 300px;
           } 
@@ -294,7 +294,7 @@
             width: 280px;
             height: 210px;
            }
-           .second-block .left-sidebar{
+           .second-block .sidebar{
             text-align: left;
            }
            .social-buttons .inner, .third-block .inner{
