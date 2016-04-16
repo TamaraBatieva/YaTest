@@ -1,29 +1,24 @@
         /* Basics */
-        
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
         body {
-            margin: 0 !important;
+            Margin: 0;
             padding: 0;
+            min-width: 100%;
+            font-family: Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            mso-line-height-rule: exactly;
             background-color: #F7F7F7;
         }
-        
         table {
             border-spacing: 0;
-            font-family: sans-serif;
-            color: #333333;
+            color: #000000;
+            font-family: Arial, sans-serif;
         }
-        
-        td {
-            padding: 0;
-        }
-        
         img {
             border: 0;
         }
-        
-        div[style*="margin: 16px 0"] {
-            margin: 0 !important;
-        }
-        
         .wrapper {
             width: 100%;
             table-layout: fixed;
@@ -33,18 +28,23 @@
             padding: 0;
             background-color: #F7F7F7;
         }
-        
         .webkit {
             max-width: 600px;
-            margin: 0 auto;
+            Margin: 0 auto;
         }
-        
         .outer {
             Margin: 0 auto;
             width: 100%;
             max-width: 600px;
         }
         
+        td {
+            padding: 0;
+        }
+        div[style*="margin: 16px 0"] {
+            margin: 0 !important;
+        }
+
         .logo {
             vertical-align: middle;
             text-align: center;
@@ -70,6 +70,8 @@
             font-size: 21px;
             Margin-bottom: 18px;
             font-family: Arial, sans-serif;
+            text-decoration: none;
+            line-height: 27px;
         }
         
         .first-block {
