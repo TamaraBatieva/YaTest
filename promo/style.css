@@ -1,7 +1,3 @@
-@font-face {
-    font-family: ArialMT;
-    src: url(ArialMT.ttf);
-}
 .slider {
     z-index: 9;
     width: 320px;
@@ -86,7 +82,7 @@
     box-sizing: border-box;
     background: #000000;
     opacity: .5;
-    font-family: ArialMT, sans-serif;
+    font-family: arialmt, sans-serif;
     color: #ffffff;
     font-size: 9px;
     position: relative;
@@ -101,7 +97,7 @@
     height: 178px;
     padding: 16px;
     box-sizing: border-box;
-    font-family: ArialMT, sans-serif;
+    font-family: arialmt, sans-serif;
     color: #ffffff;
     position: relative;
     top: -360px;
@@ -112,7 +108,7 @@
 }
 .overlay-text h1 {
     font-size: 32px;
-    font-family: ArialMT, sans-serif;
+    font-family: arialmt, sans-serif;
     font-weight: bold;
     opacity: 1;
     margin: 0;
@@ -121,7 +117,7 @@
 
 .overlay-text p {
     font-size: 12px;
-    font-family: ArialMT, sans-serif;
+    font-family: arialmt, sans-serif;
     opacity: 1;
     margin: 0;
     line-height: 18px;
@@ -133,7 +129,7 @@
     background-color: #DB3727;
     font-size: 15px;
     color: #ffffff;
-    font-family: ArialMT, sans-serif;
+    font-family: arialmt, sans-serif;
     font-weight: bold;
     border: 0;
     padding: 10px 16px;
@@ -147,4 +143,7 @@
     position: absolute;
     top: 16px;
     right: 16px;
+}
+.overlay-text p {
+    width: 50%;
 }
