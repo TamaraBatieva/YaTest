@@ -113,6 +113,7 @@
     opacity: 1;
     margin: 0;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.30);
+    line-height: 36px;
 }
 
 .overlay-text p {
@@ -122,10 +123,11 @@
     margin: 0;
     line-height: 18px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.30);
+    width: 50%;
 }
 
 .overlay-text button {
-    margin-top: 11px;
+    margin-top: 5px;
     background-color: #DB3727;
     font-size: 15px;
     color: #ffffff;
@@ -135,6 +137,7 @@
     padding: 10px 16px;
     border-radius: 4px;
     cursor: pointer;
+    line-height: 16px;
 }
 
 .slider #carousel3-icon {
@@ -143,7 +146,4 @@
     position: absolute;
     top: 16px;
     right: 16px;
-}
-.overlay-text p {
-    width: 50%;
 }
