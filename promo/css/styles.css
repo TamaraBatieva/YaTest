@@ -52,7 +52,7 @@
 }
 
 .star-sprite {
-    background: url('star.png') no-repeat;
+    background: url('../img/star.png') no-repeat;
     display: inline-block;
 }
 
